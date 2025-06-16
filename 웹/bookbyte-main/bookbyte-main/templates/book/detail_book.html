@@ -1,0 +1,19 @@
+{% extends "_base_book.html" %}
+{% block head-content %}
+
+{% endblock %}
+{% block body-content %}
+    <div class="content-parent">
+        <h1>{{ book.title }}</h1>
+        <div class="content-child1">
+            {% if book.cover_image %}
+                <img src ="{{ book.cover_image }}" alt="표지정보가 없습니다" width="195px" height="345px"/>
+            {% else %}
+                <img src="https://picsum.photos/seed/picsum/195/345" alt="기본 이미지">
+            {% endif %}
+        </div>
+        <div class="content-child2">
+            {{ book.book_explanation }}
+        </div>
+    </div>
+{% endblock %}

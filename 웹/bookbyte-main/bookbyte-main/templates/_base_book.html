@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css 적용 -->
+    <link rel="stylesheet" href = "{% static 'css/style.css' %}">
+    <link rel="stylesheet" href = "{% static 'css/bootstrap.min.css' %}">
+
+    <!-- icon 적용-->
+    <script src="https://kit.fontawesome.com/4c4232cd4f.js" crossorigin="anonymous"></script>
+
+    <title>Bookbyte</title>
+    {% block head-content %}{% endblock %}
+</head>
+<body>
+    {% include 'nav_bar.html' %}
+    <div class="header">
+        {% block body-content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

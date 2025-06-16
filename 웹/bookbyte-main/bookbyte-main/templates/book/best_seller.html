@@ -1,0 +1,31 @@
+{% extends "_base_book.html" %}
+{% block head-content %}
+
+{% endblock %}
+{% block body-content %}
+    <div class="content-header">
+        <div class="content-header-text">베스트셀러</div>
+    </div>
+    <div class="content-parent">
+    <hr/>
+        {% for book in page_obj %}
+            <div class="content-child1">
+                {% if book.cover_image %}
+                    <a href="{% url 'book:detail' pk=book.id %}"><img src ="{{ book.cover_image }}" alt="표지정보가 없습니다" width="195px" height="345px"/></a>
+                {% else %}
+                    <a href="{% url 'book:detail' pk=book.id %}"><img src="https://picsum.photos/seed/picsum/195/345" alt="기본 이미지"></a>
+                {% endif %}
+            </div>
+            <div class="content-child2">
+                <b>{{ book.title }}</b>
+                <br/>
+                {{ book.author }}
+                ·
+                {{ book.publisher }}
+            </div>
+        <hr/>
+        {% endfor %}
+        <!-- 페이징 -->
+        {% include 'book/_paging.html' %}
+    </div>
+{% endblock %}

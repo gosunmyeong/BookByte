@@ -1,0 +1,162 @@
+/* 폰트적용 */
+
+/* 수평선 색 조정 */
+hr {
+    background: gray;
+    height:2px;
+    border:0;
+}
+
+/* book start */
+/* 헤더 간격 조정 */
+.header {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.headertop{ 
+	display: inline-block; /* 같은 라인에 배치 */
+	margin-right: 5%;
+}
+
+.headermiddle{ 
+	display: inline-block; /* 같은 라인에 배치 */
+}
+
+.headermiddle li {
+	margin: 0px 25px;
+}
+
+.headermiddle a {
+	text-decoration-line: none; /* 링크 밑줄 없앰 */
+	color: #00468B;
+}
+
+/* 마우스오버 설정 */
+.headermiddle li:hover {
+	background-color: #00468B;
+  	border-radius: 3px;
+}
+
+/* 마우스오버 설정 */
+.headermiddle a:hover {
+	color: white;
+}
+
+.headerbottom{ 
+	display: inline-block; /* 같은 라인에 배치 */
+	float: right;
+}
+
+.headerbottom a {
+	text-decoration-line: none; /* 링크 밑줄 없앰 */
+	color: gray; /* 회색 */
+	font-size: 17px;
+}
+
+/* 로고 이미지 크기 */
+.logo_img {
+	height: 45px;
+}
+
+li {
+	display: inline-block /* 같은 라인에 배치 */
+} 
+
+.content-header {
+	background-color: #00468B;
+	padding: 25px 20px;
+}
+
+.content-header-text {
+	color: white;
+	font-size: 15px;
+}
+
+.content-parent {
+	padding: 25px;
+	text-align: center;
+	margin: 1px;
+}
+
+.content-child1 {
+	display: inline-block; /* 같은 라인에 배치 */
+}
+
+.content-child2 {
+	display: inline-block; /* 같은 라인에 배치 */
+}
+
+.content-child3 {
+	display: inline;
+}
+
+.content-child4 {
+	display: inline;
+}
+/* book end */
+
+/* user start */
+.user_toparea{
+	margin:3% auto;
+	width:300px; 
+	height:100px; 
+	/* background-color: rgb(255,153,0); */
+	
+	/* margin-top: 2%;
+	margin-bottom: 5%;
+	margin-left: 15%;
+	margin-right: 15%; */
+	/* text-align: center; */
+}
+
+.user_onearea{
+	margin:10% auto;
+	width:300px; 
+	height:100px; 
+}
+
+/* 리뷰작성페이지 */
+.review_onearea{
+	margin:5% auto;
+	width:700px; 
+	height:150px; 
+}
+
+.h1_title{
+	text-align: center;
+}
+.btn_sets {
+	text-align: center;
+}
+
+#btn_login {
+	display :inline-block;
+}
+
+#btn_cancel {
+	display :inline-block;
+}
+
+.logo_img_user {
+	width: 50%; 
+}
+
+.section-logo{
+	text-align: center;
+}
+
+.section-title{
+	text-align: left;
+}
+
+.user_formarea{
+	margin:0 auto;
+	width:300px; 
+	height:100px;
+}
+
+
+/* user end */

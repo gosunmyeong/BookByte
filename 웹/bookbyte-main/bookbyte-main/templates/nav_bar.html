@@ -1,0 +1,34 @@
+{% load static %}
+<header class="header">
+        <!-- 로고 -->
+            <div class="headertop">
+                <div class="logo_icon">
+                    <a href="{% url 'book:best_seller' %}"><img class="logo_img" src ="{% static 'logo/logo_horizontal-removebg.png' %}" alt="bookbyte"/></a>
+                </div>
+            </div>
+                
+            <!-- 메뉴바 -->
+            <div class="headermiddle">
+                <ul>
+                    <li><a href="{% url 'book:best_seller' %}"><b>베스트셀러</b><i class="fa-regular fa-lightbulb"></i></a></li>
+                    <li><a href="{% url 'book:recommended_book' %}"><b>AI추천도서</b><i class="fa-regular fa-lightbulb"></i></a></li>
+                    <li><a href="{% url 'book:show_all_book' %}"><b>전체도서목록</b><i class="fa-regular fa-lightbulb"></i></a></li>
+                    <li><a href="{% url 'book:show_review' %}"><b>마이리뷰조회</b><i class="fa-regular fa-lightbulb"></i></a></li>
+                </ul>
+            </div>
+            <!-- 회원가입/로그인 -->
+            <div class="headerbottom">
+                <ul>
+                    <!-- <li>취향에 더 가까운 책 추천받기 -></li> -->
+                    {% if not user.is_authenticated %}
+                        <li><a href="{% url 'users:signup' %}">회원가입</a></li>
+                        <li><a href="{% url 'users:login' %}">로그인</a></li>
+                    {% else %}
+                        <b>{{ user.username }}</b>님
+                        <li><a href="{% url 'users:logout' %}">로그아웃</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        
+        <hr/>
+</header>

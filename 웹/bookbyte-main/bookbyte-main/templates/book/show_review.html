@@ -1,0 +1,30 @@
+{% extends "_base_book.html" %}
+{% block head-content %}
+
+{% endblock %}
+{% block body-content %}
+    <div class="content-header">
+        <div class="content-header-text">리뷰 조회</div>
+    </div>
+    <div class="content-parent">
+    <hr/>
+        {% for review in reviews %}
+            <div class="content-child3">
+                {% if review.book_id.cover_image %}
+                    <img src ="{{ review.book_id.cover_image }}" alt="표지정보가 없습니다" width="195px" height="345px"/>
+                {% else %}
+                    <img src="https://picsum.photos/seed/picsum/195/345" alt="기본 이미지">
+                {% endif %}
+            </div>
+            <br/>
+            <div class="content-child4">
+                <b>{{ review.title }}</b>
+                <br/>
+                {{ review.content }}
+                <br/>
+                {{ review.grade }}
+            </div>
+        <hr/>
+        {% endfor %}
+    </div>
+{% endblock %}

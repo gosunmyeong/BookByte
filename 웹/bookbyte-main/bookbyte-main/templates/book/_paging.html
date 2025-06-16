@@ -1,0 +1,23 @@
+<!-- 페이징 start-->
+{% if page_obj.has_other_pages %}
+<!-- 이전 -->
+{% if page_obj.has_previous %}
+    <a style="color: blue;" href="?page={{ page_obj.previous_page_number }}">&#10094; 이전</a>
+{% endif %}
+
+<!-- 페이징 -->
+{# {% for page in paginator.page_range %} #}
+{% for page in custom_range %}
+    {% if page == page_obj.number %}
+        <a style="color:red;" href="?page={{ page }}">{{ page }}</a>
+    {% else %}
+        <a style="color:blue;" href="?page={{ page }}">{{ page }}</a>
+    {% endif %}
+{% endfor %}
+
+<!-- 다음 -->
+{% if page_obj.has_next %}
+    <a style="color: blue;" href="?page={{ page_obj.next_page_number }}">다음 &#10095;</a>
+{% endif %}
+{% endif %}
+<!-- 페이징 end-->
