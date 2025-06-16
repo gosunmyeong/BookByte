@@ -1,0 +1,2 @@
+모델/전처리_토요일.csv filter=lfs diff=lfs merge=lfs -text
+작업물들.zip filter=lfs diff=lfs merge=lfs -text
